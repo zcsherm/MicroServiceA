@@ -85,10 +85,22 @@ This microservice must be run locally on your machine. There are several depende
 
 
 
-<!-- USAGE EXAMPLES -->
+<!-- USAGE-->
 ## Usage
+### Setting up socket
 
-### Calling
+Setting up a socket is relatively easy
+
+    import zmq
+
+    # Establish a context
+    context = zmq.Context()
+    
+    # Set the socket type and connect to the desired location
+    socket = context.socket(zmq.REQ)
+    socket.connect("tcp://localhost:5555")
+
+### Setting up request data
 Using this microservice requires communicating over a socket. Requests must be an object in the form of:
 
     {
@@ -120,8 +132,19 @@ Using this microservice requires communicating over a socket. Requests must be a
   * int - The maximum length that the returned phrase can be.
     * If the matrix is longer than this max size, then the microservice will return an error instead
   * None - Set to None to not worry about size limits
-  
-### Returning data
+
+### Calling
+
+Calling the microservice is simple. Simply send the object using send_json.
+
+    socket.send_json(data)
+
+### Getting Response
+
+Getting the response only needs a recv_json call
+
+    conversion = socket.recv_json()
+### Returned data
 
 The microservice will send an object back of the following structure:
 
