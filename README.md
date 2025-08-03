@@ -1,12 +1,12 @@
 
 <h3 align="center">Stitch Pattern Generator</h3>
-
+![img.png](logo.png)
   <p align="center">
     Convert a sentence into a stitching pattern in a variety of fonts and sizes
     <br />
   </p>
 
-![img.png](logo.png)
+
   
 
 
