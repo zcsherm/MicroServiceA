@@ -89,11 +89,11 @@ class Microservice:
                         output = {'type': 'error',
                                   'message': f'The length of this message ({len(return_message[0])}) exceeded the max length provided {max_size}'}
                     else:
-                        output = {'type': 'letter',
+                        output = {'type': 'matrix',
                                   'message': return_message}
                 else:
                     # Send back the generated chart
-                    output = {'type':'letter',
+                    output = {'type':'matrix',
                               'message':return_message}
             else:
                 # The request type was invalid
