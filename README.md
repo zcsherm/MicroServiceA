@@ -27,6 +27,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#examples">Examples</a></li>
+    <li><a href="#customization">Customization</a></li>
     <li><a href="#troubleshooting">Troubleshooting</a></li>
   </ol>
 </details>
@@ -161,6 +162,7 @@ The microservice will send an object back of the following structure:
     * list - 2d matrix if the conversion succeeded
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- Examples-->
 ### Examples:
 #### Input: Valid request with small basic font
     # Build the message
@@ -263,7 +265,7 @@ The microservice will send an object back of the following structure:
 #### Output
 
     Conversion Failed with message: The length of this message (23) exceeded the max length provided 15
-<!-- ROADMAP -->
+
 
 #### Input: Invalid Request - The type is of request is not supported
 
@@ -338,7 +340,7 @@ The microservice will send an object back of the following structure:
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0]
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0]
 ![img.png](example3.png)
-
+<!-- Customization-->
 ## Customization
 ### Config.ini
 
@@ -361,7 +363,7 @@ The microservice will send an object back of the following structure:
 * large_size
   * The default size if a user passes 'large' for a non-basic font
 
-
+<!--Trouble Shooting-->
 ## Troubleshooting
 ### This font looks bad
 Try the following steps:
