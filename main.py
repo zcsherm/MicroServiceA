@@ -23,7 +23,7 @@ class Microservice:
         context = zmq.Context()
         self._socket = context.socket(zmq.REP)
         self._socket.bind(self._config["User Settings"]['zmq_socket'])
-
+        print("Server is listening on configured port....")
         # If this is the first time being launched, fetch to windows fonts
         if self._config["User Settings"]["first_time"]== 'True':
             self.install(self._windows_path, self._target_path)
@@ -51,6 +51,7 @@ class Microservice:
         while True:
             time.sleep(2)
             request = self._socket.recv_json()
+            print(f"Server received a request: {request}")
             # Sending a request with a type of quit, will kill the prgram
             if request['type']=='quit':
                 break
@@ -103,6 +104,7 @@ class Microservice:
             # If the message was missing a key, send back an error
             output = {'type':'error',
                      'message':'Invalid request was sent'}
+        print(f"Server is sending back response: {output}")
         self._socket.send_json(output)
 
     def convert_message(self,message,size,font):
