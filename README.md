@@ -380,3 +380,7 @@ Try the following steps:
     * As seen in the examples above, increasing the threshold can pick up on smaller lines, but denser areas may lose definition.
 3. Use all capital letters. Capital letters tend to be more space efficient than lowercase letters.
 4. Change the font. Not all fonts work at small sizes. In the example above, I would not use Broadway at this size.
+
+<!--Trouble Shooting-->
+## UML Diagram
+![img.png](UML.png)
