@@ -163,7 +163,7 @@ The microservice will send an object back of the following structure:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Examples-->
-### Examples:
+## Examples:
 #### Input: Valid request with small basic font
     # Build the message
     data = {'type':'convert',
@@ -269,7 +269,7 @@ The microservice will send an object back of the following structure:
 
 #### Input: Invalid Request - The type is of request is not supported
 
-# Build the message
+    # Build the message
     data = {'type':'req',
             'message':'Hello',
             'font':'Times',
