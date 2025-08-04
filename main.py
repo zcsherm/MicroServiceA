@@ -85,6 +85,7 @@ class Microservice:
 
                 # If a max size was sent, then we compare the received length to that
                 if max_size:
+
                     # Send an error if the generated chart was too long
                     if len(return_message[0])>max_size:
                         output = {'type': 'error',
